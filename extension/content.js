@@ -1,61 +1,45 @@
-// content.js
-
 console.log("🚀 DoomScroll AI Loaded");
 
-const processedPosts = new WeakSet();
+const processed = new WeakSet();
 
-function extractPostData(article) {
-    try {
-        if (processedPosts.has(article)) return;
+async function analyzeVideo(video) {
+    if (processed.has(video)) return;
+    processed.add(video);
 
-        processedPosts.add(article);
+    console.clear();
+    console.log("🎥 Reel detected");
 
-        // Caption
-        let caption = "";
+    const rect = video.getBoundingClientRect();
 
-        const captionSpan = article.querySelector("h1, span._ap3a, div[role='button'] span");
+    console.log("VIDEO RECT:", rect);
 
-        if (captionSpan) {
-            caption = captionSpan.innerText;
-        }
+    const spans = [...document.querySelectorAll('span[dir="auto"]')];
 
-        // Hashtags
-        const hashtags = caption.match(/#\w+/g) || [];
+    spans.forEach((span, i) => {
+        const r = span.getBoundingClientRect();
 
-        // Image
-        const img = article.querySelector("img");
+        if (r.width === 0 || r.height === 0) return;
 
-        const image = img ? img.src : "";
-
-        const data = {
-            caption,
-            hashtags,
-            image
-        };
-
-        console.log("📄 DoomScroll AI:", data);
-
-        // TODO:
-        // sendToBackend(data, article);
-
-    } catch (err) {
-        console.error(err);
-    }
+        console.log({
+            index: i,
+            text: span.innerText,
+            top: Math.round(r.top),
+            left: Math.round(r.left),
+            width: Math.round(r.width),
+            height: Math.round(r.height)
+        });
+    });
 }
 
-function scanFeed() {
-    const articles = document.querySelectorAll("article");
-
-    articles.forEach(extractPostData);
+function scan() {
+    document.querySelectorAll("video").forEach(analyzeVideo);
 }
 
-const observer = new MutationObserver(() => {
-    scanFeed();
-});
+scan();
 
-observer.observe(document.body, {
+new MutationObserver(() => {
+    scan();
+}).observe(document.body, {
     childList: true,
     subtree: true
 });
-
-scanFeed();
