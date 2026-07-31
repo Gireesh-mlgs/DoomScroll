@@ -56,7 +56,6 @@ saveButton.addEventListener("click", () => {
 
 });
 
-// Listen for hidden count updates
 chrome.storage.onChanged.addListener((changes, area) => {
 
     if (area !== "local") return;
