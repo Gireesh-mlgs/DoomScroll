@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DoomScroll AI Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🧠 DoomScroll AI</h1>
+
+    <h2>General</h2>
+
+    <label>
+        <input type="checkbox" id="enabled">
+        Enable DoomScroll AI
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox" id="blurMode">
+        Blur instead of Hide
+    </label>
+
+    <hr>
+
+    <h2>Allowed Topics</h2>
+
+    <div id="topics"></div>
+
+    <hr>
+
+    <h2>Hidden Today</h2>
+
+    <h3 id="hiddenCount">0</h3>
+
+    <button id="resetHidden">
+        Reset Counter
+    </button>
+
+    <br><br>
+
+    <button id="save">
+        Save Settings
+    </button>
+
+    <p id="status"></p>
+
+</div>
+
+<script src="options.js"></script>
+
+</body>
+</html>

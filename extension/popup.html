@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DoomScroll AI</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🧠 DoomScroll AI</h1>
+
+        <label class="switch">
+            <input type="checkbox" id="enabled">
+            <span>Enable Filtering</span>
+        </label>
+
+        <hr>
+
+        <h2>Allowed Topics</h2>
+
+        <div class="topics">
+
+            <label><input type="checkbox" value="Programming"> Programming</label>
+
+            <label><input type="checkbox" value="AI"> AI</label>
+
+            <label><input type="checkbox" value="Dank Meme"> Dank Memes</label>
+
+            <label><input type="checkbox" value="Gaming"> Gaming</label>
+
+            <label><input type="checkbox" value="Anime"> Anime</label>
+
+            <label><input type="checkbox" value="History"> History</label>
+
+            <label><input type="checkbox" value="Science"> Science</label>
+
+            <label><input type="checkbox" value="Finance"> Finance</label>
+
+            <label><input type="checkbox" value="Technology"> Technology</label>
+
+            <label><input type="checkbox" value="Travel"> Travel</label>
+
+            <label><input type="checkbox" value="Music"> Music</label>
+
+            <label><input type="checkbox" value="Education"> Education</label>
+
+        </div>
+
+        <hr>
+
+        <h2>Hidden Today</h2>
+
+        <div id="hiddenCount">
+            0
+        </div>
+
+        <button id="saveBtn">
+            Save Preferences
+        </button>
+
+        <div id="status"></div>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
