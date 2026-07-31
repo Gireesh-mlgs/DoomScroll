@@ -24,6 +24,7 @@ const TOPICS = [
 
 const topicContainer = document.getElementById("topics");
 
+
 TOPICS.forEach(topic => {
 
     const label = document.createElement("label");
