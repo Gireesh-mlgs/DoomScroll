@@ -116,7 +116,7 @@ Everything else gets blurred or hidden.
 # 📂 Folder Structure
 
 ```text
-doomscroll-ai/
+doomscroll/
 │
 ├── extension/
 │   ├── manifest.json
@@ -145,7 +145,7 @@ doomscroll-ai/
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/Gireesh-mlgs/doomscroll-ai.git
+git clone https://github.com/Gireesh-mlgs/doomscroll.git
 
 cd doomscroll
 ```
