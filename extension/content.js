@@ -11,7 +11,20 @@ async function analyzeVideo(video) {
     const rect = video.getBoundingClientRect();
 
     // Ignore off-screen videos
-   
+    if (rect.bottom < 0 || rect.top > window.innerHeight)
+        return;
+
+    const data = {
+        url: location.href,
+        username: "",
+        caption: "",
+        hashtags: [],
+        audio: "",
+        likes: "",
+        comments: "",
+        image: video.poster || "",
+        timestamp: new Date().toISOString()
+    };
 
     // ----------------------------
     // Read all visible spans
