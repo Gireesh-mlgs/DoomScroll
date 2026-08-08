@@ -10,7 +10,6 @@ async function analyzeVideo(video) {
 
     const rect = video.getBoundingClientRect();
 
-    // Ignore off-screen videos
     if (rect.bottom < 0 || rect.top > window.innerHeight)
         return;
 
