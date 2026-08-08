@@ -66,9 +66,7 @@ async function analyzeVideo(video) {
 
     });
 
-    // ----------------------------
-    // Likes / Comments
-    // ----------------------------
+ 
 
     document.querySelectorAll("span").forEach(span => {
 
