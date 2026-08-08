@@ -25,9 +25,7 @@ async function analyzeVideo(video) {
         timestamp: new Date().toISOString()
     };
 
-    // ----------------------------
-    // Read all visible spans
-    // ----------------------------
+
     const spans = [...document.querySelectorAll('span[dir="auto"]')];
 
     spans.forEach(span => {
