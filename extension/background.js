@@ -82,7 +82,7 @@ async function classifyPost(postData) {
 
 }
 
-// Extension installed
+
 chrome.runtime.onInstalled.addListener(() => {
 
     console.log("✅ DoomScroll AI Installed");
