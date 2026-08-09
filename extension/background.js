@@ -105,7 +105,6 @@ chrome.runtime.onInstalled.addListener(() => {
 
 });
 
-// Toolbar icon clicked
 chrome.action.onClicked.addListener((tab) => {
 
     console.log("Extension clicked:", tab.url);
