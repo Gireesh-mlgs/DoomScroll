@@ -4,7 +4,6 @@ console.log("🚀 DoomScroll AI Background Started");
 
 const API_URL = "http://127.0.0.1:8000/classify";
 
-// Listen for messages from content.js
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     if (message.type !== "CLASSIFY_POST") {
