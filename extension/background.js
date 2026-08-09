@@ -36,7 +36,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
         });
 
-    // Keep message channel alive
+ 
     return true;
 });
 
