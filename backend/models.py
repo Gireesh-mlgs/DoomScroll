@@ -6,7 +6,6 @@ class PostRequest(BaseModel):
     hashtags: List[str]
     image: str = ""
 
-
 class ClassificationResult(BaseModel):
     allowed: bool
     topics: List[str]
