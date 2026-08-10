@@ -32,9 +32,7 @@ class ReelRequest(BaseModel):
     image: str = ""
     timestamp: str = ""
 
-# ------------------------------------
-# Routes
-# ------------------------------------
+
 
 @app.get("/")
 def home():
