@@ -1,4 +1,3 @@
-// popup.js
 
 const enableCheckbox = document.getElementById("enabled");
 const topicCheckboxes = document.querySelectorAll(".topics input[type='checkbox']");
