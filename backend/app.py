@@ -19,9 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ------------------------------------
-# Request Model
-# ------------------------------------
+
 
 class ReelRequest(BaseModel):
     url: str = ""
