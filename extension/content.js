@@ -25,7 +25,6 @@ async function analyzeVideo(video) {
         timestamp: new Date().toISOString()
     };
 
-
     const spans = [...document.querySelectorAll('span[dir="auto"]')];
 
     spans.forEach(span => {
